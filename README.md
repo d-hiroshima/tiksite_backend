@@ -6,7 +6,7 @@ Laravel11
 
 ## ローカル環境構築手順
 1. ルートディレクトリで`docker-compose up -d --build`を実行。
-2. **すでにプロジェクトが生成されている場合は3へ** Laravelのプロジェクトがない場合は`docker-compose exec app composer create-project --prefer-dist laravel/laravel:^11.0 src`を実行。バージョンの指定をする場合は末尾に`:^version`を追記する。本プロジェクトはバージョン11を採用。
+2. **すでにプロジェクトが生成されている場合は3へ** Laravelのプロジェクトがない場合は`docker-compose exec app composer create-project --prefer-dist laravel/laravel:^11.0 src`を実行。バージョンを任意で指定をする場合は末尾に`:^version`を追記する。本プロジェクトはバージョン11を採用。
 3. コンテナに入る`docker-compose exec -u www-data app bash`のあとに`cd laravel`
    1. `ln -s public storage/app/public`を実行。
    2. `composer install`を実行。
